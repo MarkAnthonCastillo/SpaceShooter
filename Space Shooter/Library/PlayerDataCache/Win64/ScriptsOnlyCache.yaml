@@ -1,13 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BGScroller
     - DestroyByBoundary
     - DestroyByContact
     - Done_DestroyByTime
+    - EvasiveManeuver
     - GameController
     - Mover
     - PlayerController
     - RandomRotator
+    - WeaponController
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -61,30 +64,38 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9194}
     - Class: 114
-      Script: {instanceID: 9222}
+      Script: {instanceID: 9200}
     - Class: 114
-      Script: {instanceID: 9272}
+      Script: {instanceID: 9224}
     - Class: 114
-      Script: {instanceID: 9328}
+      Script: {instanceID: 9274}
     - Class: 114
-      Script: {instanceID: 9334}
+      Script: {instanceID: 9330}
     - Class: 114
-      Script: {instanceID: 9340}
+      Script: {instanceID: 9336}
     - Class: 114
-      Script: {instanceID: 9384}
+      Script: {instanceID: 9342}
     - Class: 114
       Script: {instanceID: 9386}
     - Class: 114
-      Script: {instanceID: 9560}
+      Script: {instanceID: 9388}
     - Class: 114
-      Script: {instanceID: 9698}
+      Script: {instanceID: 9562}
+    - Class: 114
+      Script: {instanceID: 9614}
     - Class: 114
       Script: {instanceID: 9702}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9706}
+    - Class: 114
+      Script: {instanceID: 9850}
+    - Class: 114
+      Script: {instanceID: 10592}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -109,6 +120,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: de7d6a5820dded6c7f75780e98f1dc41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WeaponController
   - hash:
       serializedVersion: 2
       Hash: 984dcc0ba3707b7691fbdca8ff508d28
@@ -555,7 +572,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 7a42db6d9f4b73aecd1554b5626150aa
+      Hash: 8edd28b31dfb63ef8cac8a2a4f8143b7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -571,6 +588,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 757d56d0910fdc18d03e5b801da35a3f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EvasiveManeuver
   - hash:
       serializedVersion: 2
       Hash: 00274a21279f5cb831ce20f895049e38
@@ -825,6 +848,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: be2d1663d6bc8ce39ce9c8dea6a963c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGScroller
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -844,4 +873,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/antho/Desktop/SpaceShooter/Space Shooter/Space Shooter.exe
+  playerPath: C:/Users/antho/Desktop/SpaceShooterExtended/Space Shooter.exe

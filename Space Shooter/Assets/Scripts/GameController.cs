@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-public GameObject hazard;
+public GameObject[] hazards;
 public Vector3 spawnValues;
 public int hazardCount;
 public float spawnWait;
@@ -36,7 +36,7 @@ void Update()
 {
 	if (restart)
 	{
-		if (Input.GetKeyDown(KeyCode.R))
+		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			SceneManager.LoadScene("Scenes/SampleScene");
 		}
@@ -65,6 +65,8 @@ while (true)
 yield return new WaitForSeconds(startWait);
 for (int i = 0; i < hazardCount; i++)
 {
+
+GameObject hazard= hazards[Random.Range(0, hazards.Length)];
 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
 Quaternion spawnRotation = Quaternion.identity;
 Instantiate(hazard, spawnPosition, spawnRotation);
@@ -73,7 +75,7 @@ yield return new WaitForSeconds(spawnWait);
 yield return new WaitForSeconds(waveWait);
 if (gameOver)
 {
-restartText.text = "Press 'R' for Restart";
+restartText.text = "Press 'Q' for Restart";
 restart= true;
 break;
 
@@ -90,7 +92,15 @@ UpdateScore();
 
 void UpdateScore()
 {
-ScoreText.text = "Score: " + score;
+ScoreText.text = "Points: " + score;
+
+ if (score >= 100)
+          {
+            gameOverText.text = "You win! Game Created By Mark";
+            gameOver = true;
+            restart = true;
+           }
+
 }
 
 public void GameOver()
